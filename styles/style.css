@@ -266,12 +266,58 @@ main {
     font-size: 1.3rem;
 }
 
-.exclusive-container {
+.page-conteudo { 
     color: var(--cor-texto);
-    flex-direction: row-reverse;
-    padding: 5rem 1rem;
+    background-color: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
 }
 
-.exclusive-container img {
-    max-width: 500px;
+.page-esquerda{
+    height: 100%;
+    flex-basis: 30%;
 }
+
+.page-esquerda h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.page-esquerda ul li {
+    font-weight: 550;
+    line-height: 1.5rem;
+    margin-bottom: 3px;
+    list-style: none;
+}
+
+.page-esquerda button{
+    background-color: var(--cor-logo);
+    border: none;
+    cursor: pointer;
+    margin: 1.5rem;
+    padding: 0.8rem 3.8rem;
+    border-radius: 20px;
+    color: var(--cor-texto);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
+
+}
+
+.page-esquerda button:hover{
+    background-color: var(--cor-logo-hover);
+}
+
+.page-direita{
+    display: flex;
+    flex-basis: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-direita img{
+    width: 75%;
+}
+
