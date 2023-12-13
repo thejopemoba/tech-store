@@ -6,7 +6,7 @@
 
 :root {
     --cor-primaria: #4e4e4e;
-    --cor-segundaria: #F0F0F0;
+    --cor-segundaria: #cbcbcb;
     --cor-logo: #FA4B1C;
     --cor-logo-hover: #DB4B1C;
     --cor-texto: #fff;
@@ -104,6 +104,7 @@ nav ul li:hover{
 }
 
 .cabecalho_esquerdo ul li {
+    font-weight: 550;
     line-height: 1.5rem;
     margin-bottom: 3px;
     list-style: none;
@@ -179,6 +180,11 @@ nav ul li:hover{
 
 /* --------- CONTEUDO PRINCIPAL DA PAGE ----------- */
 
+main {
+    background-image: radial-gradient(var(--cor-texto), var(--cor-segundaria));
+}
+
+
 .main {
     background-color: var(--cor-primaria);
 }
@@ -199,6 +205,73 @@ nav ul li:hover{
     gap: 3rem;
 }
 
-.cols img {
+.cols-3 img {
     width: 100%;
+    border-radius: 15px;
+}
+
+.cols-4 img {
+    width: 90%;
+    border-radius: 15px;
+}
+
+.cols-4{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.cols>*{
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cols>*:hover {
+    transform: translateY(-5px);
+}
+
+.pagina_titulo {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.8rem;
+}
+
+.pagina-barra-subtitulo {
+    width: 100px;
+    height: 5px;
+    background: var(--cor-logo);
+    border-radius: 360px;
+    margin: 8px auto 0 auto;
+}
+
+.pagina_produto {
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagina-nome-produto {
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+
+.pagina-rate-produto {
+    color: var(--cor-logo);
+    font-size: 1.3rem; 
+}
+
+.pagina-preco-produto {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.exclusive-container {
+    color: var(--cor-texto);
+    flex-direction: row-reverse;
+    padding: 5rem 1rem;
+}
+
+.exclusive-container img {
+    max-width: 500px;
 }
