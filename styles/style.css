@@ -5,7 +5,7 @@
 }
 
 :root {
-    --cor-primaria: #4e4e4e;
+    --cor-primaria: #091d51;
     --cor-secundaria: #cbcbcb;
     --cor-terciaria: #b0afaf;
     --cor-logo: #FA4B1C;
@@ -380,7 +380,7 @@ main {
     transform: translateY(-5px);
 }
 
-.comentario p{
+.comentario p {
     margin: 5px 0;
 }
 
@@ -396,7 +396,7 @@ main {
     font-weight: bold;
 }
 
-/* ----- MEDIA QUERIES -------  */
+/* ----- MEDIA QUERIES III -------  */
 
 @media (max-width: 800px) {
     .secao-comentarios {
@@ -405,5 +405,82 @@ main {
 
     .comentario {
         margin-bottom: 1.2rem;
+    }
+}
+
+/* ---------- FOOTER -------- */
+
+.footer-conteudo {
+    display: flex;
+    align-items: center;
+    color: var(--cor-secundaria);
+    padding: 4rem 1rem;
+    gap: 2rem;
+}
+
+.opcoes-download>* {
+    margin: 1rem 0;
+}
+
+.opcoes-download>:first-child {
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+.opcoes-download>div {
+    display: flex;
+}
+
+.opcoes-download>div img {
+    width: 180px;
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-links h3{
+    color: var(--cor-texto);
+    margin-bottom: 0.8rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+
+}
+
+.copyright {
+    color: var(--cor-texto);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* ----- MEDIA QUERIES IV -------  */
+
+@media (max-width: 800px){
+    .footer-conteudo{
+        display: inline;
+        font-size: 0.8rem;
+    }
+
+    .footer-conteudo>div{
+        padding: 1rem;
+    }
+
+    .opcoes-download>div {
+        display: inline;
+    }
+
+    .opcoes-download>div img {
+        width: 120px;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
     }
 }
