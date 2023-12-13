@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <div class="navegacao">
+    <div class="navegacao show-menu">
         <div class="navegacao_conteudo_interno">
             <h1 class="navegacao_logo">TECH<span>STORE</span></h1>
-            <nav class=>
+            <nav>
                 <ul class="navegacao_lista">
                     <li>Home</li>
                     <li>Produtos</li>
@@ -47,6 +47,33 @@
         </div>
     </header>
 
+    <main>
+        <section class="main">
+            <div class="main_conteudo_interno">
+                <div class="cols cols-3">
+                   <img src="./images/produtos/produto-1.png"> 
+                   <img src="./images/produtos/produto-2.png"> 
+                   <img src="./images/produtos/produto-3.png"> 
+                </div>
+            </div>
+        </section> 
+
+        <div>
+            <div class="pagina_conteudo_interno">
+                <h3>Produtos em Oferta</h3>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // responsividade para o menu
+        const navegacao = document.querySelector(".navegacao");
+        const menuButton = document.querySelector(".navegacao_icones_menu");
+
+        menuButton.addEventListener('click', () => {
+            navegacao.classList.toggle("show-menu");
+        });
+    </script>
 
 </body>
 </html>

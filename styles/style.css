@@ -5,7 +5,7 @@
 }
 
 :root {
-    --cor-primaria: #2c2c2c;
+    --cor-primaria: #4e4e4e;
     --cor-segundaria: #F0F0F0;
     --cor-logo: #FA4B1C;
     --cor-logo-hover: #DB4B1C;
@@ -17,6 +17,7 @@ body {
     font-family: 'arial';
 }
 
+/* ----------- NAVEGAÇÃO ------------ */
 .navegacao{
     background-color: var(--cor-primaria);
     padding: 1rem;
@@ -36,6 +37,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
 .navegacao_logo {
@@ -82,6 +84,7 @@ nav ul li:hover{
     display: none;
 }
 
+/* ----------- CABEÇALHO ------------ */
 .cabecalho{
     background-image: radial-gradient(var(--cor-texto), var(--cor-segundaria));
     display: flex;
@@ -132,5 +135,70 @@ nav ul li:hover{
 }
 
 .cabecalho_direito img{
+    width: 100%;
+}
+
+/* ----------- MEDIA QUERIES ------------ */
+@media (max-width: 800px){
+    .navegacao_logo {
+        font-size: 1.2rem;
+    }
+
+    .cabecalho{
+        flex-direction: column;
+        text-align: center;
+        padding-top: 4rem;
+    }
+
+    nav {
+        position: absolute;
+        background-color: var(--cor-primaria);
+        width: 100%;
+        top: 46px;
+        display: none;
+    }
+
+    .show-menu nav{
+        display: block;
+
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 0.8rem;
+    }
+
+    .navegacao_icones_menu {
+        display: block;
+    }
+}
+
+/* --------- CONTEUDO PRINCIPAL DA PAGE ----------- */
+
+.main {
+    background-color: var(--cor-primaria);
+}
+
+.main_conteudo_interno {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.cols {
+    display: grid;
+    justify-content: space-evenly;
+    padding: 4rem 1rem;
+}
+
+.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.cols img {
     width: 100%;
 }
