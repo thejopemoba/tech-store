@@ -6,7 +6,8 @@
 
 :root {
     --cor-primaria: #4e4e4e;
-    --cor-segundaria: #cbcbcb;
+    --cor-secundaria: #cbcbcb;
+    --cor-terciaria: #b0afaf;
     --cor-logo: #FA4B1C;
     --cor-logo-hover: #DB4B1C;
     --cor-texto: #fff;
@@ -27,7 +28,7 @@ body {
     z-index: 99;
 }
 
-.navegacao_conteudo_interno {
+.global_conteudo_interno {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
@@ -86,7 +87,7 @@ nav ul li:hover{
 
 /* ----------- CABEÇALHO ------------ */
 .cabecalho{
-    background-image: radial-gradient(var(--cor-texto), var(--cor-segundaria));
+    background-image: radial-gradient(var(--cor-texto), var(--cor-secundaria));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,7 +182,7 @@ nav ul li:hover{
 /* --------- CONTEUDO PRINCIPAL DA PAGE ----------- */
 
 main {
-    background-image: radial-gradient(var(--cor-texto), var(--cor-segundaria));
+    background-image: radial-gradient(var(--cor-texto), var(--cor-secundaria));
 }
 
 
@@ -189,7 +190,7 @@ main {
     background-color: var(--cor-primaria);
 }
 
-.main_conteudo_interno {
+.global_conteudo_interno {
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -318,6 +319,91 @@ main {
 }
 
 .page-direita img{
-    width: 75%;
+    width: 70%;
 }
 
+/* ------ MEDIA QUERIES II ------- */
+
+@media (max-width: 800px){
+    .pagina_titulo {
+        font-size: 1rem;
+    }
+
+    .cols-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pagina-nome-produto, .pagina-rate-produto, .pagina-preco-produto {
+        max-height: 1rem;
+        overflow: hidden;
+        font-size: 0.8rem;
+    }
+
+    .page-conteudo {
+        flex-direction: column-reverse;
+    }
+
+    .page-conteudo img {
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+    }
+
+}
+
+/* --------- SEÇÃO DE COMENTÁRIOS ------------- */
+
+.secao-comentarios {
+    display: flex;
+    padding: 4rem 1rem;
+    justify-content: space-evenly;
+}
+
+.comentario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 30%;
+    text-align: center;
+    box-shadow: 0 0 15px var(--cor-terciaria);
+    padding: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.comentario:hover {
+    transform: translateY(-5px);
+}
+
+.comentario p{
+    margin: 5px 0;
+}
+
+.comentario p:first-child {
+    font-weight: bold;
+    font-size: 5rem;
+    color: var(--cor-logo);
+    margin-top: 3rem;
+    line-height: 2rem;
+}
+
+.comentario p:last-child {
+    font-weight: bold;
+}
+
+/* ----- MEDIA QUERIES -------  */
+
+@media (max-width: 800px) {
+    .secao-comentarios {
+        flex-direction: column;
+    }
+
+    .comentario {
+        margin-bottom: 1.2rem;
+    }
+}
