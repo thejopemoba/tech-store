@@ -6,7 +6,9 @@
 
 :root {
     --cor-primaria: #2c2c2c;
-    --cor-logo: #E56608;
+    --cor-segundaria: #F0F0F0;
+    --cor-logo: #FA4B1C;
+    --cor-logo-hover: #DB4B1C;
     --cor-texto: #fff;
 
 }
@@ -80,3 +82,55 @@ nav ul li:hover{
     display: none;
 }
 
+.cabecalho{
+    background-image: radial-gradient(var(--cor-texto), var(--cor-segundaria));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.cabecalho_esquerdo{
+    height: 100%;
+    flex-basis: 30%;
+}
+
+.cabecalho_esquerdo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cabecalho_esquerdo ul li {
+    line-height: 1.5rem;
+    margin-bottom: 3px;
+    list-style: none;
+}
+
+.cabecalho_esquerdo button{
+    background-color: var(--cor-logo);
+    border: none;
+    cursor: pointer;
+    margin: 1.5rem;
+    padding: 0.8rem 3.8rem;
+    border-radius: 20px;
+    color: var(--cor-texto);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
+
+}
+
+.cabecalho_esquerdo button:hover{
+    background-color: var(--cor-logo-hover);
+}
+
+.cabecalho_direito{
+    display: flex;
+    flex-basis: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho_direito img{
+    width: 100%;
+}
